@@ -1,0 +1,79 @@
+:root {
+  --bg-color: #f9f6f0;
+  --text-color: #2c2c2c;
+  --card-bg: #ffffff;
+  --primary: #8b0000;
+  --base-font-size: 18px;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --primary: #d32f2f;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pyidaungsu', 'Padauk', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--base-font-size);
+  line-height: 1.8;
+}
+
+.app-bar {
+  background: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.controls button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-box { padding: 12px; }
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.view { padding: 16px; }
+.hidden { display: none; }
+
+#articleList { list-style: none; padding: 0; }
+#articleList li {
+  background: var(--card-bg);
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#backBtn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
