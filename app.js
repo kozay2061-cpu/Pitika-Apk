@@ -5,6 +5,10 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js');
 }
 
+// စတင်ပွင့်ချိန်တွင် Detail View ကို သေချာဖျောက်ပြီး List View ကို ပြရန်
+document.getElementById('detailView').classList.add('hidden');
+document.getElementById('listView').classList.remove('hidden');
+
 fetch('articles.json')
   .then(res => res.json())
   .then(data => {
